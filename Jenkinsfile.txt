@@ -1,6 +1,7 @@
 pipeline {
+    git 'https://github.com/VAnusha1/TE_Demo.git'
     agent any
-
+    
     stages {
         stage('Build') {
             steps {
