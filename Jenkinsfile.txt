@@ -1,13 +1,10 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Build') {
             steps {
-
                 echo 'Building..'
-                javac HelloWorld.java
-		java Helloworld
             }
         }
         stage('Test') {
