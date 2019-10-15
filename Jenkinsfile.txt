@@ -5,10 +5,13 @@ pipeline {
         stage('Build') {
             steps {
 		        sh chmod +x test.sh
+				}
+			steps{	
 			    sh './test.sh'
                 echo 'Building..'
             }
-        }
+		}
+        
         stage('Test') {
             steps {
                 echo 'Testing..'
