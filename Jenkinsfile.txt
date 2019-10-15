@@ -13,9 +13,8 @@ pipeline {
             }
 	}
 	stage('Read YAML file') {
-            steps {
-                script{ datas = readYaml (file: 'zconfig.yml') }
-                echo datas.ear_file.deploy.toString()
+            steps { 
+                  sh label: 'test.sh', script: 'test.sh'
             }
 	}
 	stage('Test2') {
