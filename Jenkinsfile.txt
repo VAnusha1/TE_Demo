@@ -12,9 +12,10 @@ pipeline {
                 echo 'Testing..'
             }
 	}
-	stage('Read YAML file') {
+	stage('YAML file') {
             steps { 
-                  sh label: 'test.sh', script: 'test.sh'
+                  sh './test.sh'
+		  echo 'Testing yaml..'	
             }
 	}
 	stage('Test2') {
