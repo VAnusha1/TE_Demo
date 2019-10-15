@@ -9,7 +9,8 @@ pipeline {
             steps {       	
                 echo 'Building..'
 				script {
-                    sh(returnStdout: true, script: 'echo true.sh')
+				    sh 'test.sh'
+                    sh(returnStdout: true, script: 'echo test.sh')
                 }
             }
 		}
