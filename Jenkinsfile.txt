@@ -3,10 +3,11 @@ pipeline {
 
     stages {
         stage('Build') {
+			environment {
+			HOME = "."
+			}
             steps {
-		        sh chmod +x test.sh
-				}
-			steps{	
+		        sh chmod +x test.sh	
 			    sh './test.sh'
                 echo 'Building..'
             }
@@ -24,3 +25,6 @@ pipeline {
         }
     }
 }
+
+stage('build') {
+      
