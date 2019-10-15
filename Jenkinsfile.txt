@@ -4,19 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+		sh './test.sh'
+		echo 'Testing yaml..'	
                 echo 'Building..'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-            }
-	}
-	stage('YAML file') {
-            steps { 
-		  sh chmod +x './test.sh' 
-                  sh './test.sh'
-		  echo 'Testing yaml..'	
             }
 	}
 	stage('Test2') {
