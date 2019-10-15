@@ -1,0 +1,12 @@
+settings:
+  stages: [build, test, deploy]
+
+app-build:
+  # Attach job to one stage of the CI pipeline
+  stage: build
+
+app-test:
+  stage: test
+
+app-deploy:
+  stage: deploy
