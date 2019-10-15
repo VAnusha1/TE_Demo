@@ -9,8 +9,7 @@ pipeline {
             steps {       	
                 echo 'Building..'
 				script {
-					sh chmod +x 'test.sh'
-				    sh './test.sh'
+				    sh "./test.sh"
                     sh(returnStdout: true, script: 'echo test.sh')
                 }
             }
