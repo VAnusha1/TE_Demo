@@ -6,10 +6,11 @@ pipeline {
 			environment {
 			HOME = "."
 			}
-            steps {
-		        sh chmod +x test.sh	
-			    sh './test.sh'
+            steps {       	
                 echo 'Building..'
+				script {
+                    sh(returnStdout: true, script: 'echo true.sh')
+                }
             }
 		}
         
