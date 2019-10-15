@@ -14,6 +14,7 @@ pipeline {
 	}
 	stage('YAML file') {
             steps { 
+		  sh chmod +x './test.sh' 
                   sh './test.sh'
 		  echo 'Testing yaml..'	
             }
