@@ -25,6 +25,12 @@ pipeline {
 					}
                 }
             }
+			
+		stage('SonarQube Analysis'){ 
+			steps{
+					sh "/home/anushav/Downloads/sonar-scanner-3.3.0.1492/bin/sonar-scanner -Dsonar.host.url=http://192.168.109.63:9000 -Dsonar.projectName=TE_DEMO -Dsonar.projectVersion=1.0 -Dsonar.projectKey=TE_DEMO -Dsonar.sources=. -Dsonar.projectBaseDir=."
+				}
+		}	
 		
         
         stage('Test') {
