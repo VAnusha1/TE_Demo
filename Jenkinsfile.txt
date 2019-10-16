@@ -1,4 +1,3 @@
-def yamlData = readYaml file: 'zconfig.yaml'
 pipeline {
     agent any
     stages {
